@@ -10,7 +10,7 @@ public class Help extends Command {
     }
 
     /**
-     * Вывод списка допустных в приложении команд
+     * Вывод списка допустимых в приложении команд
      */
     @Override
     public void execute() {
