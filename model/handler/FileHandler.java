@@ -1,7 +1,7 @@
 package model.handler;
 
 public abstract class FileHandler {
-    String fileName;
+    protected String fileName;
 
     /**
      * Абстрактный класс для записи и сохранения файлов

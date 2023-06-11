@@ -7,9 +7,8 @@ import java.util.Scanner;
 import java.util.TreeMap;
 
 public class Menu {
-    protected TreeMap<String, Command> menuList;
-    protected View view;
-    protected Presenter presenter;
+    private final TreeMap<String, Command> menuList;
+    private final View view;
 
     /**
      * Класс меню, при инициализации создает экземпляры всех команд, добавленных в меню
@@ -19,15 +18,14 @@ public class Menu {
      */
     public Menu(View view, Presenter presenter) {
         this.view = view;
-        this.presenter = presenter;
         this.menuList = new TreeMap<>();
-        addCommand(new AddToy(this, this.presenter));
-        addCommand(new RemoveToy(this, this.presenter));
-        addCommand(new Refill(this, this.presenter));
-        addCommand(new GetToy(this, this.presenter));
-        addCommand(new Help(this, this.presenter));
-        addCommand(new Exit(this, this.presenter));
-        addCommand(new ShowAll(this, this.presenter));
+        addCommand(new AddToy(this, presenter));
+        addCommand(new RemoveToy(this, presenter));
+        addCommand(new Refill(this, presenter));
+        addCommand(new GetToy(this, presenter));
+        addCommand(new Help(this, presenter));
+        addCommand(new Exit(this, presenter));
+        addCommand(new ShowAll(this, presenter));
     }
 
     public TreeMap<String, Command> getMenuList() {
